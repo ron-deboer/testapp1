@@ -1,11 +1,11 @@
 ## SolidJS Test App
 
-# clone
+1. clone
 
-# yarn
+2. yarn
 
-# yarn run dev
+3. yarn run dev
 
-# ...
+4. ...
 
-# yarn run build
+5. yarn run build

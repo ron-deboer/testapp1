@@ -2,7 +2,7 @@ import { Link } from 'solid-app-router';
 
 export default function Header(props) {
     return (
-        <nav class="nav bg-grey no-margin">
+        <nav class="nav bg-header no-margin">
             <div class="nav-left">
                 <Link href="/" class="logo text-white text-uppercase">
                     {props.name}

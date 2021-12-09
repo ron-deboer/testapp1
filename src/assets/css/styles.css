@@ -1,8 +1,11 @@
 .bg-blue {
-    background: dodgerblue;
+    background: #516beb;
 }
 .bg-teal {
-    background: teal;
+    background: #c89595;
+}
+.bg-red {
+    background: #ff6d6d;
 }
 .logo {
     font-size: 1.5em;

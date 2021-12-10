@@ -17,14 +17,14 @@ function Userlist(props) {
             </div>
             <p>
                 <button
-                    class="button outline text-white"
+                    class="button btn"
                     onClick={() => {
                         userStore.loadUsers();
                     }}
                 >
                     RELOAD USERS
                 </button>
-                <Link href="/" class="button  outline text-white">
+                <Link href="/" class="button btn">
                     HOME
                 </Link>
             </p>

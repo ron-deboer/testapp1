@@ -1,9 +1,15 @@
+import { useNavigate } from 'solid-app-router';
 import PubSub from '../services/PubSub';
 import Snackbar from '../components/snackbar';
 
 function Home(props) {
+    const navigate = useNavigate();
+
     const signin = () => {
         PubSub.emit(PubSub.topic.SHOW_SNACKBAR, 'Sign In Success ...');
+        setTimeout(() => {
+            navigate('/userlist', { replace: true });
+        }, 3000);
     };
     return (
         <>

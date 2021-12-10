@@ -8,7 +8,7 @@ function Home(props) {
     const signin = () => {
         PubSub.emit(PubSub.topic.SHOW_SNACKBAR, 'Sign In Success ...');
         setTimeout(() => {
-            navigate('/userlist', { replace: true });
+            // navigate('/userlist', { replace: true });
         }, 3000);
     };
     return (
@@ -17,12 +17,12 @@ function Home(props) {
                 <h1 class=" text-white">HOME</h1>
                 <div class="flex-container">
                     <form class="card col-6" style="padding: 40px; margin-top: 120px;">
-                        <header class="is-left">
+                        <header class="is-left" style="padding-left: 10px;">
                             <h4>Login</h4>
                         </header>
-                        <input class="col-12" placeholder="username" />
+                        <input class="col-12" placeholder="email" />
                         <input class="col-12" placeholder="password" type="password" />
-                        <footer class="is-right">
+                        <footer class="is-right" style="padding-right: 10px;">
                             <a class="button clear">Sign Up</a>
                             <a class="button primary" onClick={signin}>
                                 Sign In

@@ -8,7 +8,7 @@ function Home(props) {
     const signin = () => {
         PubSub.emit(PubSub.topic.SHOW_SNACKBAR, 'Sign In Success ...');
         setTimeout(() => {
-            // navigate('/userlist', { replace: true });
+            navigate('/userlist', { replace: true });
         }, 3000);
     };
     return (

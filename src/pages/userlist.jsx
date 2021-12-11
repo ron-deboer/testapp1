@@ -1,20 +1,15 @@
 import { For } from 'solid-js';
 import { Link } from 'solid-app-router';
 import userStore from '../stores/userstore';
+import DataTable from '../components/datatable';
 
 function Userlist(props) {
     const { users, addUser, loadUsers } = userStore;
 
     return (
-        <div class="is-full-screen bg-teal text-white text-center">
+        <div class="is-full-screen text-center">
             <h1 class="">USER LIST</h1>
-            <div class="grid-container">
-                <For each={users()}>
-                    {(user) => {
-                        return <div class="grid-cell">{user.name}</div>;
-                    }}
-                </For>
-            </div>
+            <DataTable data={users()} />
             <p>
                 <button
                     class="button btn"

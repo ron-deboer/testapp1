@@ -6,7 +6,7 @@ function Error404(props) {
             <h1 class="">ERROR 404</h1>
             <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             <p>
-                <Link href="/" class="button btn">
+                <Link href="/" class="button btn bg-white text-dark">
                     HOME
                 </Link>
             </p>

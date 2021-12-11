@@ -1,20 +1,15 @@
-.bg-header {
-    background: #000957;
-}
-.bg-blue {
-    background: #516beb;
-}
-.bg-teal {
-    background: #c89595;
-}
-.bg-red {
-    background: #ff6d6d;
-}
-.bg-white {
-    background: white;
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+        'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #333333;
+    background: #f6f9fc;
 }
 .btn {
-    background: white;
+    background: darkorange;
+    color: white;
     font-weight: 700;
     letter-spacing: 0.25em;
 }
@@ -23,6 +18,9 @@
 }
 .no-margin {
     margin: 0;
+}
+.inline {
+    display: inline-flex;
 }
 .grid-container {
     width: 75vw;
@@ -74,4 +72,47 @@
 #snackbar.hide {
     transition: transform 1s 0s;
     transform: translateY(70px);
+}
+
+/*
+ * DATATABLE
+ */
+.table {
+    margin-bottom: 20px;
+}
+.table tr {
+    border-bottom: 1px solid #ddd;
+}
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.table tr:hover {
+    cursor: pointer;
+    background: #ffe;
+}
+.table tr td {
+    padding: 10px;
+    border-right: 1px solid #ddd;
+}
+.table tr td:nth-child(1) {
+    border-left: 1px solid #ddd;
+}
+
+/*
+ * COLORS
+ */
+.bg-header {
+    background: #000957;
+}
+.bg-blue {
+    background: #516beb;
+}
+.bg-teal {
+    background: #c89595;
+}
+.bg-red {
+    background: #ff6d6d;
+}
+.bg-white {
+    background: white;
 }

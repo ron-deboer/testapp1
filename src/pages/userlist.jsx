@@ -9,7 +9,11 @@ function Userlist(props) {
     return (
         <div class="is-full-screen text-center">
             <h1 class="">USER LIST</h1>
-            <DataTable data={users()} />
+            <DataTable
+                data={users().sort((i1, i2) => {
+                    return i1.name > i2.name ? 1 : -1;
+                })}
+            />
             <p>
                 <button
                     class="button btn"

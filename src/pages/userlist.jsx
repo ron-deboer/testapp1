@@ -1,4 +1,3 @@
-import { For } from 'solid-js';
 import { Link } from 'solid-app-router';
 import userStore from '../stores/userstore';
 import DataTable from '../components/datatable';
@@ -23,8 +22,8 @@ function Userlist(props) {
                 >
                     RELOAD USERS
                 </button>
-                <Link href="/" class="button btn">
-                    HOME
+                <Link href="/adduser" class="button btn">
+                    ADD USER
                 </Link>
             </p>
         </div>

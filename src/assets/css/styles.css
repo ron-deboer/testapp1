@@ -116,3 +116,9 @@ body {
 .bg-white {
     background: white;
 }
+
+.error-msg {
+    padding-left: 10px;
+    color: crimson;
+    font-weight: 500;
+}

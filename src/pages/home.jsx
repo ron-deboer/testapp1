@@ -22,11 +22,11 @@ function Home(props) {
                         </header>
                         <input class="col-12" placeholder="email" />
                         <input class="col-12" placeholder="password" type="password" />
-                        <footer class="is-right" style="padding-right: 10px;">
-                            <a class="button clear">Sign Up</a>
+                        <footer class="is-left" style="padding-left: 10px;">
                             <a class="button primary" onClick={signin}>
                                 Sign In
                             </a>
+                            <a class="button outline">Sign Up</a>
                         </footer>
                     </form>
                 </div>

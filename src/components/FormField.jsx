@@ -2,29 +2,44 @@ import { createSignal } from 'solid-js';
 
 export default function FormField(props) {
     const [errorMsg, setErrorMsg] = createSignal('');
-    let origValue = null;
+    const origValue = props.value;
+
+    const validate = (value) => {
+        let errors = [];
+        if (props.isrequired && value == '') {
+            errors.push('Entry is required');
+        }
+        if (props.minlength && value.trim().length < parseInt(props.minlength)) {
+            errors.push('Min length is ' + props.minlength);
+        }
+        if (errors.length === 0) {
+            setErrorMsg('');
+        } else {
+            setErrorMsg(errors.join(' ... '));
+        }
+    };
 
     return (
-        <div style={{ 'margin-bottom': '10px', 'font-weight': 400 }}>
-            <label htmlFor={props.name}>{props.label}</label>
+        <div class="form-field">
+            <div class="label" htmlFor={props.name}>
+                {props.label}
+            </div>
             <input
+                class=""
+                type={props.name === 'password' ? 'password' : 'text'}
                 id={props.name}
                 name={props.name}
                 value={props.value}
                 placeholder={props.label}
-                style={{ color: '#aaa', 'font-weight': 400 }}
+                class="form-field"
+                isrequired={props.isRequired}
+                minlength={props.minLength}
+                errors={errorMsg()}
                 onblur={function (ev) {
-                    if (props.isRequired) {
-                        setErrorMsg('testing testing');
-                    }
-                }}
-                onfocus={function (ev) {
-                    if (origValue !== null) {
-                        origValue = ev.target.value;
-                    }
+                    validate(ev.target.value);
                 }}
             />
-            {errorMsg() !== '' ? <div class="error-msg">error: {errorMsg()}</div> : null}
+            {errorMsg() !== '' ? <div class="error-msg">{errorMsg()}</div> : null}
         </div>
     );
 }

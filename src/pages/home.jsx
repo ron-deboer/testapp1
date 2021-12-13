@@ -1,12 +1,11 @@
 import { useNavigate } from 'solid-app-router';
 import PubSub from '../services/PubSub';
-import Snackbar from '../components/snackbar';
 
 function Home(props) {
     const navigate = useNavigate();
 
     const signin = () => {
-        PubSub.emit(PubSub.topic.SHOW_SNACKBAR, 'Sign In Success ...');
+        PubSub.emit(PubSub.topic.SHOW_SNACKBAR, { type: 'success', text: 'Sign in Success ...' });
         setTimeout(() => {
             navigate('/userlist', { replace: true });
         }, 3000);
@@ -32,7 +31,6 @@ function Home(props) {
                 </div>
             </div>
             <footer class="is-center">eXpress - Ron deBoer - Melbourne, Australia</footer>
-            <Snackbar />
         </>
     );
 }

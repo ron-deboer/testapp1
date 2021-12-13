@@ -5,11 +5,13 @@ import Userlist from './pages/userlist';
 import Error404 from './pages/error404';
 import Home from './pages/home';
 import AddUser from './pages/AddUser';
+import Snackbar from './components/snackbar';
 
 function App() {
     return (
         <div>
-            <Header name="hardanger" />
+            <Header name="diamond" />
+            <Snackbar />
             <Routes>
                 <Route path="/" element={Home} />
                 <Route path="/userlist" element={Userlist} />

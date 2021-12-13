@@ -53,25 +53,26 @@ body {
  * SNACKBAR
  */
 #snackbar {
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: navy;
     color: #fff;
     text-align: center;
+    text-transform: uppercase;
     border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    bottom: -50px;
-    z-index: 1;
-    left: 50%;
+    padding: 5px;
 }
 #snackbar.show {
-    transition: transform 1s 0s;
-    transform: translateY(-70px);
+    background-color: navy;
+    display: block;
+}
+#snackbar.show-success {
+    background-color: green;
+    display: block;
+}
+#snackbar.show-error {
+    background-color: tomato;
+    display: block;
 }
 #snackbar.hide {
-    transition: transform 1s 0s;
-    transform: translateY(70px);
+    display: none;
 }
 
 /*
@@ -116,9 +117,28 @@ body {
 .bg-white {
     background: white;
 }
-
-.error-msg {
-    padding-left: 10px;
+.bg-success {
+    background: darkgreen;
+    color: white;
+}
+/*
+ * FORMFIELD
+ */
+.form-field {
+    color: #444;
+    opacity: 0.75;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.form-field > input {
+    margin: 0;
+}
+.form-field > .label {
+    color: navy;
+}
+.form-field > .error-msg {
     color: crimson;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
